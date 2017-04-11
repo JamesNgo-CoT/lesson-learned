@@ -1,5 +1,6 @@
 # Lesson Learned
 
+April 11, 20117
 - ACL is controlled by files and app configuration.
    - Through files, ACL is found inside settings.properties or acls.properties
    - Through app configuration, ACL is found inside app.roles, app.appAdmins, app.businessLead, app.editors
