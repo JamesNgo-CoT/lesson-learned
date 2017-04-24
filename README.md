@@ -1,5 +1,9 @@
 # Lesson Learned
 
+April 24, 2017
+- Content API is not able to handle SVG files, PNG files and Font files
+   - These are usually returned with a text/html or text/plain mime type
+
 April 20, 2017
 - EventRepo submit API accepts a filter parameter containing a field name and a regular expression to match it against
    - https://was-intra-sit.toronto.ca/cc_sr_admin_v1/retrieve/eventrepo/it_SWMS_App?json={"limit":1000,"repo":"it_SWMS_App/employeeinnovates","filter":"status~(DEL)|(REQ)"}&sid=wtQrIlmwxecwqio_I2rgEF1O8UbunNpjKz8Tn5NOZq8
