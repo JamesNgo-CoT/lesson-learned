@@ -1,5 +1,27 @@
 # Lesson Learned
 
+April 26, 2017
+
+- Submit API using deliverto to forward the post data to a different server returning back response
+   - deliveryType:"synch" makes sure that the response is returned, otherwise only "success" status is returned
+
+``` JavaScript
+function onBeforeSubmit(submit, settings) {
+	var destinationDetails = {
+		Send : {
+			TargetURL : "https://server.url.ca/api",
+			HTTPHeaders : [ {
+				name : "content-type",
+				value : "application/json"
+			} ],
+
+			Parameters : {deliveryType:"synch"}
+		}
+	};
+	deliverTo(destinationDetails, submit, settings);
+}
+```
+
 April 24, 2017
 - Content API is not able to handle SVG files, PNG files and Font files
    - These are usually returned with a text/html or text/plain mime type
